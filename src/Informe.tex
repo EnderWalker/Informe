@@ -1,0 +1,92 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{graphics}
+\includegraphics[scale=15][imagen1.eps]
+\author{Miguel Hernández}
+\title{Aproximación de $\pi$}
+\begin{document}
+\maketitle
+\talbeofcontents
+
+\begin{abstract}
+$\pi$ (pi) es la relación entre la longitud de una circunferencia y su diámetro, en geometría euclidiana. Es un número irracional y una de las constantes matemáticas más importantes. Se emplea frecuentemente en matemáticas, física e ingeniería.
+$\pi$
+\end{abstract}
+Este artículo se dedica a la explicación y a la divulgación del dicho número. La información no es propia, solo es para uso de la práctica.
+\section{Cálculo y definición de $\pi$}
+Frente a las muchas formas de computar el número $\pi$, en esta asignatura hemos utilizado una implementación que nos permite calcular y aproximar el número mediante un algoritmo informático.
+\begin{sangria}
+\subsection{Definiciones previas}
+
+Euclides fue el primero en demostrar que la relación entre una circunferencia y su diámetro es una cantidad constante.15 No obstante, existen diversas definiciones del número \pi, pero las más común es:
+
+    $\p$i es la relación entre la longitud de una circunferencia y su diámetro.
+
+Por tanto, también \pi es:
+
+    El área de un círculo unitario (de radio unidad del plano euclídeo).
+    El menor número real x positivo tal que $\sin$(x) = 0.
+
+También es posible definir analíticamente \pi; dos definiciones son posibles:
+
+    La ecuación sobre los números complejos e^{ix}+1=0 admite una infinidad de soluciones reales positivas, la más pequeña de las cuales es precisamente $\pi$ (véase identidad de Euler).
+    La ecuación diferencial S''(x)+S(x)=0 con las condiciones de contorno S(0)=0, S'(0)=1 para la que existe solución única, garantizada por el teorema de Picard-Lindelöf, es un función analítica (la función trigonométrica $\sin$(x)) cuya raíz positiva más pequeña es precisamente $\pi$.
+
+Así este número posee estructura de número irracional, sus 50 primeras cifras son:
+
+    $\pi$ = 3.1415926535897932384626434323279508841971693937510
+    
+Para el cálculo de dicho número, como en las prácticas usaremos:
+   $\sum_{i=n} f(xi)$ con $\f(x)=4/(i+x^2)$)$ y xi=(i-1/n)/n$
+
+\subsection{Algoritmo}
+\end{sangria}
+\begin{tabular}{|l|}%incluimos una tabla con nun numero de tablas que vienen introducidos 
+\hline
+import sys\newline
+PI=3.14159265358979323643380288\newline
+def funcion(n):\newline
+  if (n!=0):\newline
+    suma=0.0\newline
+    for i in range(1,n+1):\newline
+      a=(i-0.5)/n\newline
+      b=float(i)/n\newline
+      xi=(i-0.5)/n	\newline
+      fxi=4.0/(1.0+xi*xi)\newline
+      suma=suma+fxi\newline
+    resultado=suma/n\newline
+    return resultado\newline
+    
+if __name__=="__main__":\newline
+
+ if(len(sys.argv)==1) or (len(sys.argv)==2):\newe=15][imagen1.eps]line
+  print '\nNo se han introducido datos,usaremos los valores por defecto de la funcion:\newline
+  Resultados:'\newline
+  n=10\newline
+  m=10\newline
+ else:\newline
+  n=int(sys.argv[1])\newline
+  m=int(sys.argv[2])\newline
+\newline
+ l=[]\newline
+ for j in range(1, m+1):\newline
+  aproximacion=funcion(j*n)\newline
+  l=l+[aproximacion]\newline
+ print l \hline\newline
+ PARTE QUE NO CORRESPONDE A UNA FUNCIÓN
+ \hline
+ import fpython\newline
+
+t_upla=(10,100,1000,10000,100000.1000000,10000000,100000000,1000000000,10000000000,100000000000,100000000000)\newline#Crash en 4; para 5 o + valores; no
+for i in t_upla:\newline
+  ap=fpython.funcion(i)\newline
+  print ap\hline
+\end{tabular}
+
+\section{Conclusiones}
+...y aqui termina.
+\bibitem[Wikipedia]{Número $\pi$}
+\cite{Numero $\pi$}
+
+\footnote{Resumen de la práctica}
+
+\end{document}
